@@ -60,7 +60,12 @@
 
 
             var geom = new THREE.Geometry();
-            var material = new THREE.PointCloudMaterial({size: 4, vertexColors: true, color: 0xffffff});
+            var material = new THREE.PointCloudMaterial({
+                size: 4,
+                vertexColors: true,
+                color: 0xffffff,
+                sizeAnnutation: false
+            });
 
             for (var x = -5; x < 5; x++) {
                 for (var y = -5; y < 5; y++) {

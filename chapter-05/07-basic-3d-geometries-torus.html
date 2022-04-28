@@ -95,10 +95,10 @@
         function createMesh(geom) {
 
             // assign two materials
-            var meshMaterial = new THREE.MeshNormalMaterial();
+            var meshMaterial = new THREE.MeshNormalMaterial(); // 法向量材质
             meshMaterial.side = THREE.DoubleSide;
-            var wireFrameMat = new THREE.MeshBasicMaterial();
-            wireFrameMat.wireframe = true;
+            var wireFrameMat = new THREE.MeshBasicMaterial(); // 非常简单的材质，这种材质不考虑场景中光照的影响
+            wireFrameMat.wireframe = true; // 绘制线款
 
             // create a multimaterial
             var mesh = THREE.SceneUtils.createMultiMaterialObject(geom, [meshMaterial, wireFrameMat]);
